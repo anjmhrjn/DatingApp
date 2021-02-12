@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="{% static 'user/css/profile.css' %}" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+    	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+		<title>Tinder</title>
+	</head>
+	<body>
+	<header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="profile-landing.html"><img src="{% static 'Landing/images/Assets/maya.png' %}" width="160" height="70" alt=""></a>
+            <div class="loginsec ml-auto">
+                <a id="login-btn" href="/user/logout/">Logout</a>
+            </div>
+        </nav>
+    </header>
+
+	<!-- Message -->
+    <div class="d-flex justify-content-center m-0 ">
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert alert-{{ message.tags }}">
+						{{ message }}   <!-- This is flash message -->
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+		<div class="maincont">
+			<div class="side">
+				<div class="header" id="profile-img">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/men/46.jpg" alt="" />
+					</div>
+					<div class="title" id="profile-name">My Profile</div>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><span style="font-size: 1.5rem;">Matches</span></li>
+						<li class="active"><span style="font-size: 1.5rem;">Messages</span></li>
+					</ul>
+				</div>
+				<div class="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/90.jpg" alt="" /> 
+					</div>
+					<div class="message">
+						<div class="user">Frank Jensen</div>
+						<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+					</div>
+				</div>
+				<div class="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/39.jpg" alt="" />
+					</div>
+					<div class="message">
+						<div class="user">Kylie Vasquez</div>
+						<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+					</div>
+				</div>
+				<div class="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/women/38.jpg" alt="" />
+					</div>
+					<div class="message">
+						<div class="user">Cathy Andrews</div>
+						<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+					</div>
+				</div>
+				<div class="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="" />
+					</div>
+					<div class="message">
+						<div class="user">Norma Graham</div>
+						<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+					</div>
+				</div>
+				<div class="messages">
+					<div class="avatar">
+						<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="" />
+					</div>
+					<div class="message">
+						<div class="user">Clinton Powell</div>
+						<div class="text">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!--PHOTO WALA PART-->
+			
+
+			<div class="photo-and-actions float-right">
+				<div class="photo">
+					<img src="https://images.generated.photos/PaH8l2qLelOOCB_-xILXDJwIELuTpLbzwht8SwiDtLQ/rs:fit:512:512/wm:0.95:sowe:18:18:0.33/Z3M6Ly9nZW5lcmF0/ZWQtcGhvdG9zL3Yz/XzAyNzIwMDguanBn.jpg" height="684" width="368" alt="">
+					<div class="photo-text">
+						<div class="photo-name-and-age">
+							<h2>Lorem</h2>
+							<h2>21</h2>
+						</div>
+						<div class="photo-bio">
+							Lorem ipsum dolor sit amet consectetur, adipisicing
+							elit. Tempore architecto dicta tempora molestias neque
+							sint inventore quis ab fuga est?
+						</div>
+						<div class="interests">
+							<ul>
+								<li>Coffee</li>
+								<li>Football</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="actions">
+					<div class="action">
+						<i class="fas fa-times"></i>
+					</div>
+					<div class="action">
+						<i class="fas fa-star"></i>
+					</div>
+
+					<div class="action">
+						<i class="fas fa-heart"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Font Awesome -->
+		<script
+			src="https://kit.fontawesome.com/f9e19193d6.js"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

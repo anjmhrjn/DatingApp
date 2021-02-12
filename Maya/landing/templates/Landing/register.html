@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body style="background-color: #E6D7D7;">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">Our Logo</a>
+            <div class="ml-auto">
+                <a>Login</a>
+            </div>
+        </nav>
+    </header>
+    <section>
+
+        <div class="container">
+<!--            provide url in action attribute of forms    -->
+            <form name="reg-frm" method="POST" action="/submit/" id="our-form">
+                {% csrf_token %}
+                <div class="form sign-up">
+                        <div class="inputa">
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="text" placeholder="First Name" required name="fname">
+                        </div>
+                        <div class="inputa">
+                            <i class='bx bxs-lock-alt'></i>
+                            <input type="text" placeholder="Last Name" required name="lname">
+                        </div>
+                        <div class="inputa">
+                            <i class="far fa-user"></i>
+                            <input type="text" placeholder="Username" required name="username">
+                        </div>
+                        <div class="inputa">
+                            <i class="far fa-address-book"></i>
+                            <input type="number" placeholder="Contact" required name="contact" min="9800000000" max="9899999999">
+                        </div>
+                        <div class="inputa">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <input type="text" placeholder="Address" required name="address">
+                        </div>
+                        <div class="inputa">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" placeholder="Email" required name="email">
+                        </div>
+                        <div class="inputa">
+                            <i class="fas fa-key"></i>
+                            <input type="password" placeholder="Password" required name="password">
+                        </div>
+                        <div class="inputa">
+                            <i class="fas fa-key"></i>
+                            <input type="password" placeholder="Confirm Password" required name="cpassword">
+                        </div>
+
+                        <button type="button" onclick="return onSubmit()">
+                            <i class="fas fa-user-plus"></i>
+                            Sign Up
+                        </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+
+        function validation() {
+            var un = document.forms['reg-frm']['username'].value;
+            var pw = document.forms['reg-frm']['password'].value;
+            var cpw = document.forms['reg-frm']['cpassword'].value;
+            /* var un_from_db = document.forms['reg-frm']['un_from_db'].value;
+            var valid_un = true;
+
+            console.log(un_from_db[0]);
+
+            for(i = 0; i<un_from_db.length; i++) {
+                if(un_from_db[i] == un) {
+                    console.log(un_from_db[i]);
+                    console.log(un);
+                    valid_un = false;
+                }
+            } */
+
+            if (pw.length < 8) {
+                alert("Password too short");
+                return false;
+            } else if (pw != cpw) {
+                alert("Passwords don't match");
+                return false;
+            }
+            //else if (!valid_un) {
+            //    alert("Username already taken");
+            //}
+            else {
+                return true;
+            }
+        }
+
+        function onSubmit() {
+            if (validation()) {
+                //console.log('Hi');
+                document.getElementById("our-form").submit();
+            }
+
+        }
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>

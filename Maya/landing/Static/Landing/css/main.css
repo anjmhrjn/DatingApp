@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #DEF2F1;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+    --cart: #112D31;
+
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.loginsec a{
+    text-decoration: none !important;
+    color: grey;
+}
+
+
+.fullheight {
+    height: 100vh;
+}
+
+.reviewimg {
+    height: 50vh;
+}
+
+.align-item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-img-fixed {
+    background-attachment: fixed;
+}
+
+.loginsec a{
+    font-size: 1.5rem;
+    padding-right: 2rem;
+    transition: .5s ease-in-out;
+}
+
+.signup-btn {
+    transition: .5s ease-in-out;
+    color: red;
+}
+
+.signup-btn:hover, .loginsec a:hover {
+    background-color: red;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    
+}
+
+.maincont h1{
+    margin: 2rem;
+    color: white;
+}
+
+.navbar-brand img {
+    background-position: left top !important;
+}
+
+.fab {
+    font-size: 2rem;
+    margin-right: 2rem;
+}
+
+.fab:hover {
+    cursor: pointer;
+}
+
+.input-grp input{
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.input-grp button {
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+.input-grp button:hover {
+    background-color: red;
+    color: white;
+    transition: .6s ease-in-out;
+    border-color: red;
+}
+
+
+
+.review-main {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+.review-cont {
+    padding: 3rem;
+    border-bottom: .125rem solid var(--grey);
+    position: relative;
+    text-align: center;
+}
+
+
+
+.review-info {
+    padding: 3rem;
+    text-align: center;
+}
+
+.rating {
+    margin-top: 2rem;
+}
+
+.rating i {
+    color: var(--primary-color);
+}
+
+.more p{
+    margin-top: 10px;
+    margin-left: 40px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.footer div{
+    margin-top: 1rem !important;
+}
+
