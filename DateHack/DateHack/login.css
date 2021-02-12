@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #0F9D58;
+    --background-color: #DEF2F1;
+    --secon-color: #9da2ad;
+    --grey: #7a7a7b;
+    --white: #ffffff;
+    --cart: #112D31;
+
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.bg-light {
+    background: transparent !important;
+}
+
+.fullheight {
+    height: 100vh;
+}
+
+.align-item-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-img-fixed {
+    background-attachment: fixed;
+}
+
+
+.signup-btn {
+    transition: .5s ease-in-out;
+    color: red;
+}
+
+.signup-btn:hover {
+    background-color: red;
+    border-radius: 2rem;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.maincont h1{
+    margin: 2rem;
+}
